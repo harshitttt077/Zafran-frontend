@@ -1,6 +1,6 @@
-"use client";
+
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
@@ -34,22 +34,22 @@ export default function Navbar() {
                 />
               </a>
               <Link
-                href="/"
+                to="/"
                 aria-current="page"
                 className="navbar3_link w-nav-link w--current"
               >
                 Home
               </Link>
-              <Link href="/about-us" className="navbar3_link w-nav-link">
+              <Link to="/about-us" className="navbar3_link w-nav-link">
                 About Us
               </Link>
-              <Link href="/catering" className="navbar3_link w-nav-link">
+              <Link to="/catering" className="navbar3_link w-nav-link">
                 Catering
               </Link>
-              <Link href="/private-events" className="navbar3_link w-nav-link">
+              <Link to="/private-events" className="navbar3_link w-nav-link">
                 Private Events
               </Link>
-              <Link href="/contact-us" className="navbar3_link w-nav-link">
+              <Link to="/contact-us" className="navbar3_link w-nav-link">
                 Contact Us
               </Link>
               <div className="nav-buttons hamburger">
