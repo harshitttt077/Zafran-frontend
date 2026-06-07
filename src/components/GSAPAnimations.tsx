@@ -10,14 +10,14 @@ export default function GSAPAnimations() {
 
     const ctx = gsap.context(() => {
       // 1. Hero / Main Headings fade-in up
-      gsap.utils.toArray(".heading-style-h1, .heading-style-h2").forEach((el: any) => {
-        gsap.from(el, {
+      gsap.utils.toArray(".heading-style-h1, .heading-style-h2").forEach((el: unknown) => {
+        gsap.from(el as Element, {
           y: 50,
           opacity: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: el,
+            trigger: el as Element,
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
@@ -25,15 +25,15 @@ export default function GSAPAnimations() {
       });
 
       // 2. Layout Images scale down effect
-      gsap.utils.toArray(".layout1_image-wrapper, .features-card").forEach((el: any) => {
-        gsap.from(el, {
+      gsap.utils.toArray(".layout1_image-wrapper, .features-card").forEach((el: unknown) => {
+        gsap.from(el as Element, {
           scale: 0.9,
           opacity: 0,
           duration: 1,
           ease: "power2.out",
           stagger: 0.2,
           scrollTrigger: {
-            trigger: el,
+            trigger: el as Element,
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
@@ -41,14 +41,14 @@ export default function GSAPAnimations() {
       });
 
       // 3. CTA cards fade up
-      gsap.utils.toArray(".cta39_card, .testimonial-card").forEach((el: any) => {
-        gsap.from(el, {
+      gsap.utils.toArray(".cta39_card, .testimonial-card").forEach((el: unknown) => {
+        gsap.from(el as Element, {
           y: 40,
           opacity: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: el,
+            trigger: el as Element,
             start: "top 80%",
             toggleActions: "play none none reverse",
           },

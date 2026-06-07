@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -8,18 +8,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import GSAPAnimations from "@/components/GSAPAnimations";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({
-  variable: "--font-inter", 
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Zafran | North Indian Taste",
+  title: "Zafran",
   description: "Experience the finest organic Indian food at Zafran.",
 };
 
