@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 First, run the development server:
+Premium restaurant website built with React and Framer Motion, featuring elegant UI, smooth animations, and responsive design.
 
 ```bash
 npm run dev
