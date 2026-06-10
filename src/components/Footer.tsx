@@ -1,3 +1,8 @@
+import { Link } from 'react-router-dom'
+
+const MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=812+4th+St.+Delhi+Delhi+110001'
+
 export default function Footer() {
   return (
     <>
@@ -11,7 +16,12 @@ export default function Footer() {
                     <div className="text-color-white text-style-nowrap">
                       <span className="text_sub">LOCATION</span>
                     </div>
-                    <a href="#" className="footer4_link">
+                    <a
+                      href={MAPS_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="footer4_link"
+                    >
                       812 4th St. Delhi, Delhi 110001
                     </a>
                   </div>
@@ -27,8 +37,11 @@ export default function Footer() {
                     <div className="text-color-white text-style-nowrap">
                       <span className="text_sub">EMAIL</span>
                     </div>
-                    <a href="#" className="footer4_link">
-                      teamZafran@Zafranrestaurant.com
+                    <a
+                      href="mailto:teamzafran@zafranrestaurant.com"
+                      className="footer4_link"
+                    >
+                      teamzafran@zafranrestaurant.com
                     </a>
                   </div>
                 </div>
@@ -184,27 +197,26 @@ export default function Footer() {
                   <div className="footer4_credit-text">
                     © 2025 Zafran. All rights reserved.
                   </div>
-                  <a
+                  <Link
                     aria-label="see privacy policy"
-                    role="button"
-                    href="/privacy-policy"
+                    to="/privacy-policy"
                     className="footer4_legal-link"
                   >
                     Privacy Policy
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     aria-label="see terms of service"
-                    role="button"
-                    href="/terms-and-conditions"
+                    to="/terms-and-conditions"
                     className="footer4_legal-link"
                   >
                     Terms of Service
-                  </a>
+                  </Link>
                 </div>
                 <a
                   aria-label="visit developer github profile"
                   href="https://github.com/harshitru"
                   target="_blank"
+                  rel="noreferrer"
                   className="agency-credit"
                 >
                   SITE BY HARSHIT | MADE WITH FRAMER

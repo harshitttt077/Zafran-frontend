@@ -1,11 +1,14 @@
 
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function GSAPAnimations() {
+  const location = useLocation()
+
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     const ctx = gsap.context(() => {
       // 1. Hero / Main Headings fade-in up
@@ -53,10 +56,11 @@ export default function GSAPAnimations() {
           },
         });
       });
-    });
+      ScrollTrigger.refresh()
+    })
 
-    return () => ctx.revert();
-  }, []);
+    return () => ctx.revert()
+  }, [location.pathname])
 
-  return null;
+  return null
 }

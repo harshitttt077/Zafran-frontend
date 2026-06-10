@@ -1,37 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zafran Indian Cuisine
 
-## Getting Started
+Static frontend-only restaurant website built with React, TypeScript, and Vite.
 
-First, run the development server:
-Premium restaurant website built with React and Framer Motion, featuring elegant UI, smooth animations, and responsive design.
+Premium restaurant website built with React, featuring elegant UI, smooth animations, and responsive design.
+
+## Stack
+
+- React 19
+- TypeScript
+- Vite
+- React Router
+- GSAP + Lenis
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run check
+```
 
-## Learn More
+This runs linting and a production build.
 
-To learn more about Next.js, take a look at the following resources:
+## Frontend-only behavior
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The project is intentionally deployable without a backend.
+- Contact-style forms are handled on the client by opening a prefilled `mailto:` draft.
+- Routes are served as a single-page app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+### Build command
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Output directory
+
+```bash
+dist
+```
+
+### Static hosting notes
+
+- Vercel is supported through `vercel.json`.
+- Netlify-style SPA rewrites are supported through `public/_redirects`.
+- Any other static host must rewrite unknown routes to `/index.html`.
+
+### Node version
+
+Use Node `20+`.
+
+## Main routes
+
+- `/`
+- `/about-us`
+- `/catering`
+- `/private-events`
+- `/contact-us`
+- `/privacy-policy`
+- `/terms-and-conditions`
