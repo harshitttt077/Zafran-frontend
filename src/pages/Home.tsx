@@ -30,7 +30,7 @@ export default function Home() {
                       <div className="max-width-large align-center">
                         <div className="padding-vertical padding-large">
                           <div className="text-color-white text-style-nowrap text-weight-semibold text-color-primary">
-                            CERTIFIED GREEN BUSINESS
+                            100% AUTHENTIC ROYAL INDIAN CUISINE
                           </div>
                           <div className="margin-bottom margin-medium">
                             <h1 className="heading-style-h1">
@@ -167,7 +167,7 @@ export default function Home() {
               <img
                 sizes="100vw"
                 srcSet="https://cdn.prod.website-files.com/67aa834395fffab892104661/67abcab8186c539095738df7_bkg-img_hero-p-500.avif 500w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abcab8186c539095738df7_bkg-img_hero-p-800.avif 800w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abcab8186c539095738df7_bkg-img_hero.avif 1680w"
-                alt="A table filled with various Indian dishes at Lotus Indian Cuisine in New Delhi, showcasing vibrant colors and flavors."
+                alt="A table filled with various Indian dishes at Zafran Indian Cuisine in New Delhi, showcasing vibrant colors and flavors."
                 src="https://cdn.prod.website-files.com/67aa834395fffab892104661/67abcab8186c539095738df7_bkg-img_hero.avif"
                 loading="eager"
                 className="header30_background-image"
@@ -245,7 +245,7 @@ export default function Home() {
                           Of course, you may order <strong>a la carte</strong>{" "}
                           at any time that Zafran is open, including during our
                           lunch hours. Visit us in downtown Delhi, and
-                          don&apos;t forget to contact us at (011) 456-5808.
+                          don&apos;t forget to contact us at +91 98110 45808.
                         </div>
                       </div>
                     </div>
@@ -497,16 +497,19 @@ export default function Home() {
                     <div className="features-card">
                       <div className="feature-img_wrapper">
                         <img
-                          src="https://cdn.prod.website-files.com/67aa834395fffab892104661/67b693f3f408125ff2bf2298_green.avif"
+                          src="/images/indian_trust_seal.svg"
                           loading="lazy"
-                          alt="Lotus Cuisine of India in New Delhi, India is a part of the India Green Business Network."
+                          alt="Zafran Indian Cuisine - 100% Authentic Indian Cuisine & Certified Heritage Taste in Delhi NCR."
                           className="feature-img"
                         />
                       </div>
+                      <div className="text-size-tiny text-color-primary">
+                        Certified &amp; Assured
+                      </div>
                       <h3 className="heading-style-h4">
-                        CERTIFIED&nbsp;GREEN
+                        100% AUTHENTIC
                         <br />
-                        BUSINESS
+                        INDIAN CUISINE
                       </h3>
                     </div>
                     <div className="features-card">
@@ -1315,7 +1318,7 @@ export default function Home() {
                       <img
                         sizes="100vw"
                         srcSet="https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080-p-500.avif 500w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080-p-800.avif 800w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080-p-1080.avif 1080w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080-p-1600.avif 1600w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080-p-2000.avif 2000w, https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080.avif 3000w"
-                        alt="A beautifully arranged table featuring a variety of dishes from Lotus Indian Cuisine in New Delhi."
+                        alt="A beautifully arranged table featuring a variety of dishes from Zafran Indian Cuisine in New Delhi."
                         src="https://cdn.prod.website-files.com/67aa834395fffab892104661/67abea2acb89115b32690007_AKL05080.avif"
                         loading="lazy"
                         className="cta41_background-image"

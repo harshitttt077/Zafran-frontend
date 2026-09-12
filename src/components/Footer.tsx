@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=812+4th+St.+Delhi+Delhi+110001'
+  'https://www.google.com/maps/search/?api=1&query=Connaught+Place+New+Delhi+110001'
 
 export default function Footer() {
   return (
@@ -22,15 +22,15 @@ export default function Footer() {
                       rel="noreferrer"
                       className="footer4_link"
                     >
-                      812 4th St. Delhi, Delhi 110001
+                      Connaught Place, New Delhi, Delhi 110001
                     </a>
                   </div>
                   <div className="w-layout-vflex footer-row">
                     <div className="text-color-white text-style-nowrap">
                       <span className="text_sub">PHONE</span>
                     </div>
-                    <a href="tel:10114565808" className="footer4_link">
-                      +1 (011) 456-5808
+                    <a href="tel:+919811045808" className="footer4_link">
+                      +91 98110 45808
                     </a>
                   </div>
                   <div className="w-layout-vflex footer-row">

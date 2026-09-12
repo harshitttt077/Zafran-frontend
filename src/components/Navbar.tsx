@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
-const PHONE_URL = 'tel:+10114565808'
+const PHONE_URL = 'tel:+919811045808'
 
 function navLinkClass({ isActive }: { isActive: boolean }) {
   return `navbar3_link w-nav-link${isActive ? ' w--current' : ''}`

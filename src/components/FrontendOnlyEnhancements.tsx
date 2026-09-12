@@ -6,9 +6,9 @@ const CONTACT_EMAIL = 'teamzafran@zafranrestaurant.com'
 
 const actionMessages: Record<string, string> = {
   order:
-    'Online ordering will be connected inside this Zafran site soon. For now, please call +1 (011) 456-5808.',
+    'Online ordering will be connected inside this Zafran site soon. For now, please call +91 98110 45808.',
   delivery:
-    'Delivery links will be connected here soon. For now, please call +1 (011) 456-5808 to order.',
+    'Delivery links will be connected here soon. For now, please call +91 98110 45808 to order.',
   giftCard:
     'Gift cards will be available from this Zafran site soon. Please contact the restaurant for now.',
 }

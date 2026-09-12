@@ -1,0 +1,133 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sealBg" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#221C16" />
+      <stop offset="100%" stop-color="#14110E" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D068" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <linearGradient id="spiceGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E85D04" />
+      <stop offset="50%" stop-color="#F48C06" />
+      <stop offset="100%" stop-color="#FFBA08" />
+    </linearGradient>
+    <!-- Curved path for upper text -->
+    <path id="textPathUpper" d="M 90 250 A 160 160 0 0 1 410 250" />
+    <!-- Curved path for lower text -->
+    <path id="textPathLower" d="M 410 250 A 160 160 0 0 1 90 250" />
+  </defs>
+
+  <!-- Outer Scalloped Sunburst Ring (24 Points) -->
+  <g stroke="#D4AF37" stroke-width="3" fill="#1C1814">
+    <!-- Outer Star Burst Petals -->
+    <path d="M 250 16 L 268 45 L 302 32 L 314 65 L 350 59 L 354 94 L 390 95 L 386 130 L 419 138 L 407 172 L 436 187 L 416 218 L 441 239 L 414 266 L 433 293 L 401 314 L 414 345 L 378 360 L 384 394 L 347 401 L 346 436 L 310 435 L 302 468 L 268 459 L 253 490 L 232 459 L 198 468 L 190 435 L 154 436 L 153 401 L 116 394 L 122 360 L 86 345 L 99 314 L 67 293 L 86 266 L 59 239 L 84 218 L 64 187 L 93 172 L 81 138 L 114 130 L 110 95 L 146 94 L 150 59 L 186 65 L 198 32 L 232 45 Z" fill="#181410" stroke="#D4AF37" stroke-width="4" stroke-linejoin="round" />
+  </g>
+
+  <!-- Inner Seal Circle -->
+  <circle cx="250" cy="250" r="195" fill="url(#sealBg)" stroke="#D4AF37" stroke-width="5" />
+  <circle cx="250" cy="250" r="182" fill="none" stroke="#F4D068" stroke-width="1.5" stroke-dasharray="4 4" />
+  <circle cx="250" cy="250" r="140" fill="#1C1712" stroke="#D4AF37" stroke-width="3" />
+
+  <!-- Circular Arched Text -->
+  <text font-family="'Forum', 'Times New Roman', Georgia, serif" font-size="20" font-weight="bold" fill="#F4D068" letter-spacing="4">
+    <textPath href="#textPathUpper" startOffset="50%" text-anchor="middle">
+      ★ 100% AUTHENTIC INDIAN ★
+    </textPath>
+  </text>
+  <text font-family="'Forum', 'Times New Roman', Georgia, serif" font-size="18" font-weight="bold" fill="#EFE7D2" letter-spacing="4">
+    <textPath href="#textPathLower" startOffset="50%" text-anchor="middle">
+      ★ HERITAGE RECIPES • DELHI NCR ★
+    </textPath>
+  </text>
+
+  <!-- Decorative Laurel Leaves (Left & Right) -->
+  <g fill="#D4AF37" opacity="0.85">
+    <!-- Left Leaves -->
+    <path d="M 135 250 C 130 238 122 232 118 230 C 122 236 125 244 125 250 C 125 256 122 264 118 270 C 122 268 130 262 135 250 Z" />
+    <path d="M 142 220 C 135 210 125 206 120 206 C 126 211 130 219 131 225 C 133 231 132 238 130 244 C 134 240 140 231 142 220 Z" />
+    <path d="M 142 280 C 140 269 134 260 130 256 C 132 262 133 269 131 275 C 130 281 126 289 120 294 C 125 294 135 290 142 280 Z" />
+    <!-- Right Leaves -->
+    <path d="M 365 250 C 370 238 378 232 382 230 C 378 236 375 244 375 250 C 375 256 378 264 382 270 C 378 268 370 262 365 250 Z" />
+    <path d="M 358 220 C 365 210 375 206 380 206 C 374 211 370 219 369 225 C 367 231 368 238 370 244 C 366 240 360 231 358 220 Z" />
+    <path d="M 358 280 C 360 269 366 260 370 256 C 368 262 367 269 369 275 C 370 281 374 289 380 294 C 375 294 365 290 358 280 Z" />
+  </g>
+
+  <!-- Center Artwork: Royal Handi / Spice Pot with Saffron Petals and Star -->
+  <!-- Top Royal Star / Kalash Finial -->
+  <g transform="translate(250, 160)">
+    <!-- 8-Point Star -->
+    <polygon points="0,-18 5,-5 18,0 5,5 0,18 -5,5 -18,0 -5,-5" fill="#F4D068" stroke="#111" stroke-width="1.5" />
+    <!-- Radiating Steam / Spice Aroma lines -->
+    <path d="M -22 -2 C -28 -12 -22 -20 -15 -26" stroke="url(#spiceGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 22 -2 C 28 -12 22 -20 15 -26" stroke="url(#spiceGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 0 -22 C -4 -30 4 -38 0 -44" stroke="url(#spiceGrad)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- The Traditional Handi / Cooking Vessel -->
+  <g transform="translate(250, 260)">
+    <!-- Handi Lid Rim -->
+    <ellipse cx="0" cy="-44" rx="56" ry="10" fill="#F4D068" stroke="#111" stroke-width="3.5" />
+    <ellipse cx="0" cy="-48" rx="44" ry="7" fill="#D4AF37" stroke="#111" stroke-width="2.5" />
+    <!-- Lid Handle Knob -->
+    <ellipse cx="0" cy="-55" rx="14" ry="7" fill="#FFBA08" stroke="#111" stroke-width="2.5" />
+    <rect x="-4" y="-53" width="8" height="6" fill="#D4AF37" stroke="#111" stroke-width="2" />
+
+    <!-- Handi Body (Round traditional pot) -->
+    <!-- Base shadow -->
+    <ellipse cx="0" cy="48" rx="45" ry="10" fill="#0E0C09" />
+    <!-- Pot Outer -->
+    <path d="M -50 -42 C -78 -10 -72 38 -40 46 C -20 51 20 51 40 46 C 72 38 78 -10 50 -42 Z" fill="#EFE7D2" stroke="#111" stroke-width="4.5" />
+    
+    <!-- Pot Decorative Neck Band -->
+    <path d="M -48 -32 C -20 -28 20 -28 48 -32 L 46 -24 C 20 -20 -20 -20 -46 -24 Z" fill="#D4AF37" stroke="#111" stroke-width="2.5" />
+
+    <!-- Traditional Royal Indian Paisley / Motif on Pot Body -->
+    <!-- Central Lotus / Mandala motif inside pot -->
+    <g transform="translate(0, 8)">
+      <circle cx="0" cy="0" r="18" fill="#1C1712" stroke="#D4AF37" stroke-width="2" />
+      <circle cx="0" cy="0" r="10" fill="url(#spiceGrad)" />
+      <!-- Petals around central circle -->
+      <path d="M 0 -18 C -5 -25 5 -25 0 -18 Z" fill="#D4AF37" />
+      <path d="M 0 18 C -5 25 5 25 0 18 Z" fill="#D4AF37" />
+      <path d="M -18 0 C -25 -5 -25 5 -18 0 Z" fill="#D4AF37" />
+      <path d="M 18 0 C 25 -5 25 5 18 0 Z" fill="#D4AF37" />
+      <!-- Diagonal Petals -->
+      <circle cx="-13" cy="-13" r="3" fill="#D4AF37" />
+      <circle cx="13" cy="-13" r="3" fill="#D4AF37" />
+      <circle cx="-13" cy="13" r="3" fill="#D4AF37" />
+      <circle cx="13" cy="13" r="3" fill="#D4AF37" />
+    </g>
+
+    <!-- Side Handles -->
+    <path d="M -60 -24 C -74 -24 -76 -10 -64 -6" fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" />
+    <path d="M 60 -24 C 74 -24 76 -10 64 -6" fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Bottom Banner with "ZAFRAN ASSURED" -->
+  <g transform="translate(250, 335)">
+    <!-- Ribbon Shadow -->
+    <path d="M -90 14 L -115 32 L -90 28 Z" fill="#664D0A" />
+    <path d="M 90 14 L 115 32 L 90 28 Z" fill="#664D0A" />
+    <!-- Ribbon Tail Left -->
+    <path d="M -90 0 L -125 0 L -115 15 L -125 30 L -90 22 Z" fill="#AA7C11" stroke="#111" stroke-width="2.5" />
+    <!-- Ribbon Tail Right -->
+    <path d="M 90 0 L 125 0 L 115 15 L 125 30 L 90 22 Z" fill="#AA7C11" stroke="#111" stroke-width="2.5" />
+    <!-- Main Center Ribbon -->
+    <rect x="-95" y="-5" width="190" height="30" rx="4" fill="url(#goldGrad)" stroke="#111" stroke-width="3" />
+    <text x="0" y="16" font-family="'Forum', 'Times New Roman', Georgia, serif" font-size="14" font-weight="900" fill="#14110E" text-anchor="middle" letter-spacing="2">
+      ZAFRAN CERTIFIED
+    </text>
+  </g>
+
+  <!-- 5 Gold Stars at bottom of seal -->
+  <g transform="translate(250, 395)" fill="#F4D068">
+    <polygon points="0,-7 2,-2 7,-2 3,1 5,6 0,3 -5,6 -3,1 -7,-2 -2,-2" />
+    <polygon points="-24,-5 -22,0 -17,0 -21,3 -19,8 -24,5 -29,8 -27,3 -31,0 -26,0" />
+    <polygon points="24,-5 26,0 31,0 27,3 29,8 24,5 19,8 21,3 17,0 22,0" />
+    <polygon points="-46,-1 -44,4 -39,4 -43,7 -41,12 -46,9 -51,12 -49,7 -53,4 -48,4" />
+    <polygon points="46,-1 48,4 53,4 49,7 51,12 46,9 41,12 43,7 39,4 44,4" />
+  </g>
+</svg>
