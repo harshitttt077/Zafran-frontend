@@ -1,4 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const PHONE_URL = 'tel:+10114565808'
 
@@ -6,13 +7,23 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
   return `navbar3_link w-nav-link${isActive ? ' w--current' : ''}`
 }
 
-function DeliveryLinks() {
+function DeliveryLinks({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean
+  onClose?: () => void
+}) {
   return (
-    <nav className="dropdown-list w-dropdown-list">
+    <nav
+      className={`dropdown-list w-dropdown-list${isOpen ? ' w--open' : ''}`}
+      style={isOpen ? { display: 'block' } : undefined}
+    >
       <a
         aria-label="Contact Zafran to place an order"
         href="#"
         data-frontend-action="delivery"
+        onClick={onClose}
         className="dropdown-link w-inline-block"
       >
         <img
@@ -31,6 +42,7 @@ function DeliveryLinks() {
         aria-label="Contact Zafran to place an order"
         href="#"
         data-frontend-action="delivery"
+        onClick={onClose}
         className="dropdown-link w-inline-block"
       >
         <div className="icon-embed-xsmall w-embed">
@@ -53,13 +65,18 @@ function DeliveryLinks() {
         </div>
         <div>UBER&nbsp;EATS</div>
       </a>
-      <Link to="/contact-us" className="dropdown-link w-inline-block">
+      <Link
+        to="/contact-us"
+        onClick={onClose}
+        className="dropdown-link w-inline-block"
+      >
         <div>DINE&nbsp;IN&nbsp;Delhi</div>
       </Link>
       <a
         aria-label="Contact Zafran to place an order"
         href="#"
         data-frontend-action="delivery"
+        onClick={onClose}
         className="dropdown-link w-inline-block"
       >
         <img
@@ -79,6 +96,27 @@ function DeliveryLinks() {
 }
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isHamburgerDropdownOpen, setIsHamburgerDropdownOpen] = useState(false)
+  const location = useLocation()
+
+  const [prevPathname, setPrevPathname] = useState(location.pathname)
+
+  // Reset menu and dropdowns during render when route changes
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname)
+    setIsMenuOpen(false)
+    setIsDropdownOpen(false)
+    setIsHamburgerDropdownOpen(false)
+  }
+
+  const closeAll = () => {
+    setIsMenuOpen(false)
+    setIsDropdownOpen(false)
+    setIsHamburgerDropdownOpen(false)
+  }
+
   return (
     <div>
       <div
@@ -93,15 +131,34 @@ export default function Navbar() {
         data-duration={400}
       >
         <div className="navbar3_container">
-          <div className="navbar3_menu-button w-nav-button">
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            className={`navbar3_menu-button w-nav-button${isMenuOpen ? ' w--open' : ''}`}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
             <div className="menu-icon3">
               <div className="menu-icon3_line-top" />
               <div className="menu-icon3_line-middle" />
               <div className="menu-icon3_line-bottom" />
             </div>
-          </div>
-          <nav role="navigation" className="navbar3_menu w-nav-menu">
-            <Link to="/" className="navbar3_logo-link-menu w-nav-brand">
+          </button>
+          <nav
+            role="navigation"
+            className={`navbar3_menu w-nav-menu${isMenuOpen ? ' w--open' : ''}`}
+            data-nav-menu-open={isMenuOpen ? '' : undefined}
+          >
+            <Link
+              to="/"
+              onClick={closeAll}
+              className="navbar3_logo-link-menu w-nav-brand"
+            >
               <img
                 loading="eager"
                 src="/zafran-logo.png"
@@ -109,19 +166,27 @@ export default function Navbar() {
                 className="navbar3_logo"
               />
             </Link>
-            <NavLink to="/" end className={navLinkClass}>
+            <NavLink to="/" end className={navLinkClass} onClick={closeAll}>
               Home
             </NavLink>
-            <NavLink to="/about-us" className={navLinkClass}>
+            <NavLink to="/about-us" className={navLinkClass} onClick={closeAll}>
               About Us
             </NavLink>
-            <NavLink to="/catering" className={navLinkClass}>
+            <NavLink to="/catering" className={navLinkClass} onClick={closeAll}>
               Catering
             </NavLink>
-            <NavLink to="/private-events" className={navLinkClass}>
+            <NavLink
+              to="/private-events"
+              className={navLinkClass}
+              onClick={closeAll}
+            >
               Private Events
             </NavLink>
-            <NavLink to="/contact-us" className={navLinkClass}>
+            <NavLink
+              to="/contact-us"
+              className={navLinkClass}
+              onClick={closeAll}
+            >
               Contact Us
             </NavLink>
             <div className="nav-buttons hamburger">
@@ -134,13 +199,23 @@ export default function Navbar() {
               <div
                 data-hover="true"
                 data-delay={0}
-                className="dropdown-button w-dropdown"
+                className={`dropdown-button w-dropdown${isHamburgerDropdownOpen ? ' w--open' : ''}`}
+                onMouseEnter={() => setIsHamburgerDropdownOpen(true)}
+                onMouseLeave={() => setIsHamburgerDropdownOpen(false)}
               >
-                <div className="dropdown-toggle w-dropdown-toggle">
+                <div
+                  className={`dropdown-toggle w-dropdown-toggle${isHamburgerDropdownOpen ? ' w--open' : ''}`}
+                  onClick={() => setIsHamburgerDropdownOpen((prev) => !prev)}
+                  role="button"
+                  tabIndex={0}
+                >
                   <div className="icon w-icon-dropdown-toggle" />
                   <div>DELIVERY</div>
                 </div>
-                <DeliveryLinks />
+                <DeliveryLinks
+                  isOpen={isHamburgerDropdownOpen}
+                  onClose={closeAll}
+                />
               </div>
               <a
                 href="#"
@@ -151,7 +226,12 @@ export default function Navbar() {
               </a>
             </div>
           </nav>
-          <Link to="/" role="button" className="navbar3_logo-link w-nav-brand">
+          <Link
+            to="/"
+            role="button"
+            className="navbar3_logo-link w-nav-brand"
+            onClick={closeAll}
+          >
             <img
               data-w-id="dda6f055-9afd-5853-65cd-0f2a665fca24"
               loading="lazy"
@@ -173,13 +253,20 @@ export default function Navbar() {
             <div
               data-hover="true"
               data-delay={0}
-              className="dropdown-button w-dropdown"
+              className={`dropdown-button w-dropdown${isDropdownOpen ? ' w--open' : ''}`}
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <div className="dropdown-toggle w-dropdown-toggle">
+              <div
+                className={`dropdown-toggle w-dropdown-toggle${isDropdownOpen ? ' w--open' : ''}`}
+                onClick={() => setIsDropdownOpen((prev) => !prev)}
+                role="button"
+                tabIndex={0}
+              >
                 <div className="icon w-icon-dropdown-toggle" />
                 <div>DELIVERY</div>
               </div>
-              <DeliveryLinks />
+              <DeliveryLinks isOpen={isDropdownOpen} onClose={closeAll} />
             </div>
             <a
               href="#"
@@ -189,7 +276,11 @@ export default function Navbar() {
               ORDER&nbsp;NOW
             </a>
           </div>
-          <div className="navbar3_menu-background" />
+          <div
+            className={`navbar3_menu-background${isMenuOpen ? ' w--open' : ''}`}
+            style={isMenuOpen ? { display: 'block' } : undefined}
+            onClick={closeAll}
+          />
         </div>
       </div>
     </div>

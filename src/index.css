@@ -233,3 +233,24 @@
     font-size: 2.15rem !important;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .navbar3_menu.w--open {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .navbar3_menu-background.w--open {
+    display: block !important;
+  }
+
+  .dropdown-list.w--open {
+    display: block !important;
+    position: static !important;
+    box-shadow: none !important;
+  }
+}
+

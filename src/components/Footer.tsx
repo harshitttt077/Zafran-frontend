@@ -214,7 +214,7 @@ export default function Footer() {
                 </div>
                 <a
                   aria-label="visit developer github profile"
-                  href="https://github.com/harshitru"
+                  href="https://github.com/harshitttt077"
                   target="_blank"
                   rel="noreferrer"
                   className="agency-credit"
